@@ -18,12 +18,6 @@ class Complex(object):
         return Complex(self.real*other.real - self.imag*other.imag,
                        self.imag*other.real + self.real*other.imag)
                       
-
-    #def __div__(self, other):
-    #    sr, si, or, oi = self.real, self.imag, \
-    #                     other.real, other.imag # short forms
-    #    r = float(or**2 + oi**2)
-    #    return Complex((sr*or+si*oi)/r, (si*or-sr*oi)/r)
     def divide(self, other):
 
         r1 = self.real * other.real
@@ -57,10 +51,6 @@ class Complex(object):
     def repr(self):
         return 'Complex' + str(self)
 
-    #def pow(self, power):
-    #    raise NotImplementedError\ 
-    #          ('self**power is not yet impl. for Complex')
-
     def conjugate(self):
         return Complex(self.real, -self.imag)
 
@@ -69,17 +59,14 @@ class Complex(object):
         print(self.real , "+" ,self.imag,"i")
         
 
-
-
-a = Complex(2,1)
-#a.conjugate().display()
-a.inverse().display()
-#display .repr(a)
-
-#repr(a).displa)
+a = Complex(1,2)
+#### a would refer to 1+2*i 
+a .display()
+#### prints out “1 + 2i”
 b = Complex(2,-3)
-c = b.divide(a)
-#c.display()    
-   
+c = b.add(a)
+c.display()
+#### prints out “3 - 1i”
+c.conjugate().display() ### prints “3+1i”
 
 
