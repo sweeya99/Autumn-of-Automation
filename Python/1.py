@@ -14,3 +14,4 @@ x = int (input ("enter the no of digits : "))
 start =(pow (10 , (x-1)) )+ 1
 end = (pow (10 ,x) ) - 1 
 generate_twins(start, end )
+
