@@ -28,9 +28,7 @@ while True:
 				if(abs(d1-d2) <1 ):
 					cv2.imshow("test",im)
 					cv2.putText(im,"Circle",(x,y),cv2.FONT_HERSHEY_COMPLEX,0.5,(0))
-				else:
-					cv2.putText(im,"Oval",(x,y),cv2.FONT_HERSHEY_COMPLEX,0.5,(0))
-
+				
 
 
 		
