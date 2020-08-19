@@ -51,7 +51,13 @@ def converter (msg) :
     siny_cosp = 2 * (( w * z )+ ( x * y ) )
     cosy_cosp = 1 - 2* (( y * y ) + ( z * z))
     euler_angles.yaw = atan2(siny_cosp ,cosy_cosp)
-
+    '''
+    while not rospy.is_shutdown():
+        pub = rospy.Publisher('topic2',rollpitchyaw ,queue_size = 10)
+        pub.Publish(rpy)
+        rate.sleep()
+    '''
+    #instead of return we need to put the publish commands
     return euler_angles
 
 
